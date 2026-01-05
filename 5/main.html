@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .todo-container {
+            background: #ffffff;
+            width: 380px;
+            max-width: 90%;
+            padding: 28px 30px;
+            border-radius: 16px;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+        }
+
+        .todo-container h1 {
+            margin: 0 0 20px;
+            text-align: center;
+            font-size: 1.8rem;
+            color: #333;
+        }
+
+        .todo-input {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 22px;
+        }
+
+        .todo-input input {
+            flex: 1;
+            padding: 12px 14px;
+            font-size: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            outline: none;
+            transition: border 0.2s ease;
+        }
+
+        .todo-input input:focus {
+            border-color: #667eea;
+        }
+
+        .todo-input button {
+            padding: 12px 16px;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background: #667eea;
+            color: #fff;
+            transition: background 0.2s ease, transform 0.15s ease;
+        }
+
+        .todo-input button:hover {
+            background: #5a6fdc;
+            transform: translateY(-2px);
+        }
+
+        .todo-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .todo-list li.done {
+            text-decoration: line-through;
+            color: #999;
+            background: #ececec;
+        }
+
+
+        .todo-list li {
+            background: #f7f7f7;
+            padding: 12px 14px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .todo-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .todo-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .todo-actions button {
+            border: none;
+            background: transparent;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.15s ease;
+        }
+
+        .todo-actions button:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="todo-container">
+        <h1>My Todo List</h1>
+
+        <div class="todo-input">
+            <input type="text" id="inputTask" placeholder="Add a new task..." />
+            <button id='add'>Add</button>
+        </div>
+
+        <ul class="todo-list">
+
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
