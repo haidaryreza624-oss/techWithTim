@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Stopwatch</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1e1e2f, #2c2c44);
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fff;
+        }
+
+        .stopwatch {
+            background: #151522;
+            padding: 30px 40px;
+            border-radius: 16px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            width: 300px;
+        }
+
+        .time {
+            font-size: 3rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .buttons button {
+            flex: 1;
+            padding: 12px 0;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+        }
+
+        .start {
+            background: #2ecc71;
+            color: #0c2d1a;
+        }
+
+        .stop {
+            background: #e74c3c;
+            color: #3a0f0b;
+        }
+
+        .reset {
+            background: #f1c40f;
+            color: #3a3200;
+        }
+
+        .buttons button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .buttons button:active {
+            transform: translateY(0);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="stopwatch">
+        <div class="time">00:00</div>
+        <div class="buttons">
+            <button class="start" onclick="">Start</button>
+            <button class="stop" onclick="stopTimer()">Stop</button>
+            <button class="reset" onclick="resetTimer()">Reset</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

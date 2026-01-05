@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Random Quote Generator</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+        }
+
+        .quote-container {
+            background: rgba(0, 0, 0, 0.35);
+            padding: 35px 40px;
+            border-radius: 18px;
+            width: 420px;
+            max-width: 90%;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+        }
+
+        .quote {
+            font-size: 1.4rem;
+            line-height: 1.6;
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .quote::before {
+            content: "“";
+            font-size: 3rem;
+            position: absolute;
+            left: -15px;
+            top: -15px;
+            opacity: 0.5;
+        }
+
+        .quote::after {
+            content: "”";
+            font-size: 3rem;
+            position: absolute;
+            right: -15px;
+            bottom: -15px;
+            opacity: 0.5;
+        }
+
+        .author {
+            font-size: 1rem;
+            font-weight: 600;
+            opacity: 0.85;
+            margin-bottom: 30px;
+        }
+
+        .author::before {
+            content: "— ";
+        }
+
+        .generate-btn {
+            padding: 12px 28px;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            background: #1abc9c;
+            color: #063a30;
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+        }
+
+        .generate-btn:hover {
+            background: #16a085;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+        }
+
+        .generate-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="quote-container">
+        <div class="quote">
+
+        </div>
+        <div class="author"></div>
+        <button class="generate-btn" id="generate">New Quote</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
